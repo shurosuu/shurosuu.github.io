@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RecipeBox</title>
+
+    <style>
+        
+
+/* ===== TO AVOID BLUE THING IN THE LINK ===== */
+    .card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+        /* ===== FLOATING CREATE BUTTON ===== */
+.create-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background: 	#f1dec9; /* green color for action */
+    color: rgb(0, 0, 0);
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: 0.2s;
+}
+
+.create-btn:hover {
+    background: #c8b6a6; /* darker green on hover */
+}
+
+
+        /* ===== SEARCH BAR ===== */
+.search-container {
+    display: flex;
+    justify-content: center; /* centers in the page */
+    margin: 30px 0;
+}
+
+.search-input {
+    width: 400px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-btn {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background: #eeeeee;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.search-btn:hover {
+    background: #dddddd;
+}
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        /* ===== TOP NAVIGATION BAR ===== */
+        header {
+            background: 	#f1dec9;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .top-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            padding: 8px 16px;
+            background: #eeeeee;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .nav-btn:hover {
+            background: #dddddd;
+        }
+
+        /* ===== CENTER CONTENT ===== */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .see-more {
+            font-size: 14px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        /* ===== MOVIE STYLE ROW ===== */
+        .row {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        /* ===== RECIPE CARD ===== */
+        .card {
+            min-width: 170px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            padding: 8px;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card p {
+            margin: 8px 0 4px;
+            font-size: 14px;
+        }
+
+        .row::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* ===== FLOATING HELP BUTTON ===== */
+        .help-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #333;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+
+        .help-btn:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<header>
+    <div class="title">🍳 RecipeBox</div>
+
+    <div class="top-buttons">
+        <span class="nav-btn">Home</span>
+        <span class="nav-btn">Favorites</span>
+        <span class="nav-btn">Profile</span>
+        <span class="nav-btn">Settings</span>
+        
+    </div>
+</header>
+
+
+
+
+
+<div class="container">
+
+    <div class="search-container">
+    <input type="text" placeholder="Search recipes..." class="search-input">
+    <button class="search-btn">🔍</button>
+</div>
+
+
+    <!-- Popular -->
+    
+
+    <div class="section-header">
+        <h2>Popular Recipes</h2>
+        <span class="see-more">See more ></span>
+    </div>
+    <div class="row">
+        <a href="spaghetti.html" class="card-link"><div class="card"><img src="Spaghetti.jpg"><p>Spaghetti</p></div></a>
+        <a href="friedchicken.html" class="card-link"><div class="card"><img src="fried chicken.jfif"><p>Fried Chicken</p></div></a>
+        <a href="burger.html" class="card-link"><div class="card"><img src="burger.jpg"><p>Burger</p></div></a>
+        <a href="pancakes.html" class="card-link"><div class="card"><img src="pancakes.jfif"><p>Pancakes</p></div></a>
+        <a href="matcha latte.html" class="card-link"><div class="card"><img src="matcha.webp"><p>Matcha Latte</p></div></a>
+    </div>
+
+    <!-- Lunch -->
+    <div class="section-header">
+        <h2>Lunch</h2>
+        <span class="see-more">See more ></span>
+    </div>
+
+    <div class="row">
+        <div class="card"><img src="adobo.jpg"><p>Adobo</p></div>
+        <div class="card"><img src="sinigang.jpg"><p>Sinigang</p></div>
+        <div class="card"><img src="kaldereta.avif"><p>Kaldereta</p></div>
+        <div class="card"><img src="minudo.jpg"><p>Minudo</p></div>
+        <div class="card"><img src="nilagang baboy.jpg"><p>Nilagang Baboy</p></div>
+    </div>
+
+    <!-- Dessert -->
+    <div class="section-header">
+        <h2>Dessert</h2>
+        <span class="see-more">See more ></span>
+    </div>
+
+    <div class="row">
+        <div class="card"><img src="cake.jpg"><p>Cake</p></div>
+        <div class="card"><img src="ice cream.jpg"><p>Ice Cream</p></div>
+        <div class="card"><img src="leche flan.jpg"><p>Leche flan</p></div>
+        <div class="card"><img src="cookies.jpg"><p>Cookies</p></div>
+        <div class="card"><img src="brownies.jpg"><p>Brownies</p></div>
+    </div>
+
+    <!-- Breakfast -->
+    <div class="section-header">
+        <h2>Breakfast</h2>
+        <span class="see-more">See more ></span>
+    </div>
+
+    <div class="row">
+        <div class="card"><img src="waffles.jpg"><p>Waffles</p></div>
+        <div class="card"><img src="omelette.jfif"><p>Omelette</p></div>
+        <div class="card"><img src="bread.jpg"><p>Bread</p></div>
+        <div class="card"><img src="croissants.jpg"><p>Croissants</p></div>
+        <a href="pancakes.html" class="card-link"><div class="card"><img src="pancakes.jfif"><p>Pancakes</p></div></a>
+    </div>
+
+    <!-- Dinner -->
+     <div class="section-header">
+        <h2>Dinner</h2>
+        <span class="see-more">See more ></span>
+    </div>
+
+    <div class="row">
+        <div class="card"><img src="pizza.jfif"><p>Pizza</p></div>
+        <div class="card"><img src="roasted chicken.avif"><p>Roasted Chicken</p></div>
+        <div class="card"><img src="salmon fillet.jpg"><p>Salmon Fillet</p></div>
+        <div class="card"><img src="chicken curry.avif"><p>Chicken Curry</p></div>
+        <div class="card"><img src="lasagna.jpg"><p>Lasagna</p></div>
+    </div>
+
+    <!-- Drinks -->
+     <div class="section-header">
+        <h2>Drinks</h2>
+        <span class="see-more">See more ></span>
+    </div>
+
+    <div class="row">
+        <div class="card"><img src="Smoothie.jpg"><p>Smoothie</p></div>
+        <div class="card"><img src="hot chocolate.jpg"><p>Hot Chocolate</p></div>
+        <div class="card"><img src="milk shake.jpg"><p>Milk Shake</p></div>
+        <div class="card"><img src="fruit punch.jfif"><p>Fruit Punch</p></div>
+        <div class="card"><img src="bubble tea.jfif"><p>Bubble Tea</p></div>
+    </div>
+
+</div>
+
+<!-- Floating Help -->
+<div class="help-btn">Help ?</div>
+
+<!-- Floating Create Button -->
+<div class="create-btn">➕ Create</div>
+
+</body>
+</html>
