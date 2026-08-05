@@ -190,10 +190,13 @@
     <div class="title">🍳 RecipeBox</div>
 
     <div class="top-buttons">
-        <span class="nav-btn">Home</span>
-        <span class="nav-btn">Favorites</span>
-        <span class="nav-btn">Profile</span>
-        <span class="nav-btn">Settings</span>
+        <span class="nav-btn" title="Go to the Home page">Home</span>
+
+        <span class="nav-btn" title="View your favorite recipes">Favorites</span>
+
+        <span class="nav-btn" title="View your profile">Profile</span>
+
+        <span class="nav-btn" title="Application settings">Settings</span>
         
     </div>
 </header>
@@ -205,8 +208,16 @@
 <div class="container">
 
     <div class="search-container">
-    <input type="text" placeholder="Search recipes..." class="search-input">
-    <button class="search-btn">🔍</button>
+    <input
+type="text"
+placeholder="Search recipes..."
+class="search-input"
+title="Search for recipes by name">
+    <button
+class="search-btn"
+title="Click to search">
+🔍
+</button>
 </div>
 
 
@@ -299,10 +310,19 @@
 
 <!-- Floating Help -->
 <a href="help.html" class="help-link">
-    <div class="help-btn">Help ?</div>
+    <div
+class="help-btn"
+title="Open the Help Center">
+Help ?
+</div>
 </a>
+
 <!-- Floating Create Button -->
-<div class="create-btn">➕ Create</div>
+<div
+class="create-btn"
+title="Create a new recipe">
+➕ Create
+</div>
 
 </body>
 </html>
